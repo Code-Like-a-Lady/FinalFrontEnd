@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddCustomProduct.aspx" />
     <Content Include="AddMaskType.aspx" />
     <Content Include="AddPSize.aspx" />
     <Content Include="AddSize.aspx" />
@@ -709,6 +710,13 @@
     <Content Include="Custom.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomProduct.aspx.cs">
+      <DependentUpon>AddCustomProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCustomProduct.aspx.designer.cs">
+      <DependentUpon>AddCustomProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddMaskType.aspx.cs">
       <DependentUpon>AddMaskType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

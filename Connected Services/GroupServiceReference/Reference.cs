@@ -1383,10 +1383,10 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         System.Threading.Tasks.Task<string> UpdatepsizeAsync(int sizeid, int psize, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Addcustom", ReplyAction="http://tempuri.org/IGroupService/AddcustomResponse")]
-        string Addcustom(int pid, int filter, string size);
+        string Addcustom(int filter, string size, string colour, string imageURL);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Addcustom", ReplyAction="http://tempuri.org/IGroupService/AddcustomResponse")]
-        System.Threading.Tasks.Task<string> AddcustomAsync(int pid, int filter, string size);
+        System.Threading.Tasks.Task<string> AddcustomAsync(int filter, string size, string colour, string imageURL);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Editcustom", ReplyAction="http://tempuri.org/IGroupService/EditcustomResponse")]
         string Editcustom(int filter, string size, string colour, int _ID, string imageURL);
@@ -1730,12 +1730,12 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.UpdatepsizeAsync(sizeid, psize, id);
         }
         
-        public string Addcustom(int pid, int filter, string size) {
-            return base.Channel.Addcustom(pid, filter, size);
+        public string Addcustom(int filter, string size, string colour, string imageURL) {
+            return base.Channel.Addcustom(filter, size, colour, imageURL);
         }
         
-        public System.Threading.Tasks.Task<string> AddcustomAsync(int pid, int filter, string size) {
-            return base.Channel.AddcustomAsync(pid, filter, size);
+        public System.Threading.Tasks.Task<string> AddcustomAsync(int filter, string size, string colour, string imageURL) {
+            return base.Channel.AddcustomAsync(filter, size, colour, imageURL);
         }
         
         public string Editcustom(int filter, string size, string colour, int _ID, string imageURL) {

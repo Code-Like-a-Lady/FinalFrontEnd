@@ -397,9 +397,10 @@
   <xs:element name="Addcustom">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="pid" type="xs:int" />
         <xs:element minOccurs="0" name="filter" type="xs:int" />
         <xs:element minOccurs="0" name="size" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="colour" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageURL" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
