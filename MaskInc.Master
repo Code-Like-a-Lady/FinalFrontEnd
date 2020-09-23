@@ -11,7 +11,7 @@
     <title>MaskInc.</title>
    
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets2/img/MaskIncon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Logo.ico">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -54,14 +54,14 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="Home.aspx"><img src="assets/img/MaskIncLogo.png" alt=""></a>
+                    <a href="Home.aspx"><img src="assets/img/Logo.png" alt=""></a>
                 </div>
                 <div class="header-right">
                     <img src="assets/img/icons/search.png" alt="" class="search-trigger">
                     <img src="assets/img/icons/man.png" alt="">
                     <a href="ShoppingCart.aspx">
                         <img src="assets/img/icons/cart2.png" alt="">
-                        <span>2</span>
+                        <span>0</span>
                     </a>
                 </div>
                 <div class="user-access">
@@ -83,9 +83,7 @@
                             </ul>
                         </li>
                         <li><a href="CheckOut.aspx">CheckOut</a></li>
-                        <li><a href="ShoppingCart.aspx">ShoppingCart</a></li>
-                        <li><a href="#">About</a></li>
-                        
+                        <li><a href="ShoppingCart.aspx">ShoppingCart</a></li>    
                     </ul>
                 </nav>
             </div>

@@ -554,6 +554,9 @@
     <Content Include="Connected Services\GroupServiceReference\Group_MaskInc_FrontEnd.GroupServiceReference.User_Table.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\GroupServiceReference\Group_MaskInc_FrontEnd.GroupServiceReference.Cart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\GroupServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -1228,6 +1228,99 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cart", Namespace="http://schemas.datacontract.org/2004/07/Group_Project")]
+    [System.SerializableAttribute()]
+    public partial class Cart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Client_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Product_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Client_Id {
+            get {
+                return this.Client_IdField;
+            }
+            set {
+                if ((this.Client_IdField.Equals(value) != true)) {
+                    this.Client_IdField = value;
+                    this.RaisePropertyChanged("Client_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Product_Id {
+            get {
+                return this.Product_IdField;
+            }
+            set {
+                if ((this.Product_IdField.Equals(value) != true)) {
+                    this.Product_IdField = value;
+                    this.RaisePropertyChanged("Product_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="GroupServiceReference.IGroupService")]
     public interface IGroupService {
@@ -1490,6 +1583,12 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllDeliveries", ReplyAction="http://tempuri.org/IGroupService/GetAllDeliveriesResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[]> GetAllDeliveriesAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveriesForClient", ReplyAction="http://tempuri.org/IGroupService/GetDeliveriesForClientResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesForClient(int ClientID);
         
@@ -1497,10 +1596,58 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[]> GetDeliveriesForClientAsync(int ClientID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveriesByCompany", ReplyAction="http://tempuri.org/IGroupService/GetDeliveriesByCompanyResponse")]
-        Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesByCompany(int DeliveryID);
+        Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[] GetDeliveriesByCompany(int DeliveryID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveriesByCompany", ReplyAction="http://tempuri.org/IGroupService/GetDeliveriesByCompanyResponse")]
-        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[]> GetDeliveriesByCompanyAsync(int DeliveryID);
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[]> GetDeliveriesByCompanyAsync(int DeliveryID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDelivery", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDelivery(int DeliveryID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDelivery", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryAsync(int DeliveryID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddtoCart", ReplyAction="http://tempuri.org/IGroupService/AddtoCartResponse")]
+        bool AddtoCart(int ClientId, int ProductID, int quantity, decimal price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddtoCart", ReplyAction="http://tempuri.org/IGroupService/AddtoCartResponse")]
+        System.Threading.Tasks.Task<bool> AddtoCartAsync(int ClientId, int ProductID, int quantity, decimal price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/EditFromCart", ReplyAction="http://tempuri.org/IGroupService/EditFromCartResponse")]
+        bool EditFromCart(int ClientId, int ProductID, int quantity, decimal price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/EditFromCart", ReplyAction="http://tempuri.org/IGroupService/EditFromCartResponse")]
+        System.Threading.Tasks.Task<bool> EditFromCartAsync(int ClientId, int ProductID, int quantity, decimal price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllCartItemsForClient", ReplyAction="http://tempuri.org/IGroupService/GetAllCartItemsForClientResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Cart[] GetAllCartItemsForClient(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllCartItemsForClient", ReplyAction="http://tempuri.org/IGroupService/GetAllCartItemsForClientResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart[]> GetAllCartItemsForClientAsync(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllProductsInCart", ReplyAction="http://tempuri.org/IGroupService/GetAllProductsInCartResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Product[] GetAllProductsInCart(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllProductsInCart", ReplyAction="http://tempuri.org/IGroupService/GetAllProductsInCartResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product[]> GetAllProductsInCartAsync(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/RemoveFromCart", ReplyAction="http://tempuri.org/IGroupService/RemoveFromCartResponse")]
+        bool RemoveFromCart(int ClientId, int ProdID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/RemoveFromCart", ReplyAction="http://tempuri.org/IGroupService/RemoveFromCartResponse")]
+        System.Threading.Tasks.Task<bool> RemoveFromCartAsync(int ClientId, int ProdID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/ClearTheCart", ReplyAction="http://tempuri.org/IGroupService/ClearTheCartResponse")]
+        bool ClearTheCart(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/ClearTheCart", ReplyAction="http://tempuri.org/IGroupService/ClearTheCartResponse")]
+        System.Threading.Tasks.Task<bool> ClearTheCartAsync(int ClientID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1874,6 +2021,14 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetAllDeliveriesAsync();
         }
         
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID) {
+            return base.Channel.GetDeliveryForOrder(orderID);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID) {
+            return base.Channel.GetDeliveryForOrderAsync(orderID);
+        }
+        
         public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesForClient(int ClientID) {
             return base.Channel.GetDeliveriesForClient(ClientID);
         }
@@ -1882,12 +2037,76 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetDeliveriesForClientAsync(ClientID);
         }
         
-        public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesByCompany(int DeliveryID) {
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[] GetDeliveriesByCompany(int DeliveryID) {
             return base.Channel.GetDeliveriesByCompany(DeliveryID);
         }
         
-        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[]> GetDeliveriesByCompanyAsync(int DeliveryID) {
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[]> GetDeliveriesByCompanyAsync(int DeliveryID) {
             return base.Channel.GetDeliveriesByCompanyAsync(DeliveryID);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDelivery(int DeliveryID) {
+            return base.Channel.GetDelivery(DeliveryID);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryAsync(int DeliveryID) {
+            return base.Channel.GetDeliveryAsync(DeliveryID);
+        }
+        
+        public bool AddtoCart(int ClientId, int ProductID, int quantity, decimal price) {
+            return base.Channel.AddtoCart(ClientId, ProductID, quantity, price);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddtoCartAsync(int ClientId, int ProductID, int quantity, decimal price) {
+            return base.Channel.AddtoCartAsync(ClientId, ProductID, quantity, price);
+        }
+        
+        public bool EditFromCart(int ClientId, int ProductID, int quantity, decimal price) {
+            return base.Channel.EditFromCart(ClientId, ProductID, quantity, price);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditFromCartAsync(int ClientId, int ProductID, int quantity, decimal price) {
+            return base.Channel.EditFromCartAsync(ClientId, ProductID, quantity, price);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Cart[] GetAllCartItemsForClient(int ClientID) {
+            return base.Channel.GetAllCartItemsForClient(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart[]> GetAllCartItemsForClientAsync(int ClientID) {
+            return base.Channel.GetAllCartItemsForClientAsync(ClientID);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Product[] GetAllProductsInCart(int ClientID) {
+            return base.Channel.GetAllProductsInCart(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product[]> GetAllProductsInCartAsync(int ClientID) {
+            return base.Channel.GetAllProductsInCartAsync(ClientID);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id) {
+            return base.Channel.GetCartItem(ClientID, Prod_Id);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id) {
+            return base.Channel.GetCartItemAsync(ClientID, Prod_Id);
+        }
+        
+        public bool RemoveFromCart(int ClientId, int ProdID) {
+            return base.Channel.RemoveFromCart(ClientId, ProdID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RemoveFromCartAsync(int ClientId, int ProdID) {
+            return base.Channel.RemoveFromCartAsync(ClientId, ProdID);
+        }
+        
+        public bool ClearTheCart(int ClientID) {
+            return base.Channel.ClearTheCart(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ClearTheCartAsync(int ClientID) {
+            return base.Channel.ClearTheCartAsync(ClientID);
         }
     }
 }

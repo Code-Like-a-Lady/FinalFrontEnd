@@ -265,6 +265,12 @@
   <wsdl:message name="IGroupService_GetAllDeliveries_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllDeliveriesResponse" />
   </wsdl:message>
+  <wsdl:message name="IGroupService_GetDeliveryForOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryForOrder" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetDeliveryForOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryForOrderResponse" />
+  </wsdl:message>
   <wsdl:message name="IGroupService_GetDeliveriesForClient_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDeliveriesForClient" />
   </wsdl:message>
@@ -276,6 +282,54 @@
   </wsdl:message>
   <wsdl:message name="IGroupService_GetDeliveriesByCompany_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDeliveriesByCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetDelivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDelivery" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetDelivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddtoCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddtoCart" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddtoCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddtoCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_EditFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditFromCart" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_EditFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllCartItemsForClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCartItemsForClient" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllCartItemsForClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCartItemsForClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllProductsInCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsInCart" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetAllProductsInCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsInCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetCartItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartItem" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_GetCartItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromCart" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_RemoveFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_ClearTheCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTheCart" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_ClearTheCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTheCartResponse" />
   </wsdl:message>
   <wsdl:portType name="IGroupService">
     <wsdl:operation name="Login">
@@ -450,6 +504,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetAllDeliveries" message="tns:IGroupService_GetAllDeliveries_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetAllDeliveriesResponse" message="tns:IGroupService_GetAllDeliveries_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetDeliveryForOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetDeliveryForOrder" message="tns:IGroupService_GetDeliveryForOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse" message="tns:IGroupService_GetDeliveryForOrder_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDeliveriesForClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetDeliveriesForClient" message="tns:IGroupService_GetDeliveriesForClient_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetDeliveriesForClientResponse" message="tns:IGroupService_GetDeliveriesForClient_OutputMessage" />
@@ -457,6 +515,38 @@
     <wsdl:operation name="GetDeliveriesByCompany">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetDeliveriesByCompany" message="tns:IGroupService_GetDeliveriesByCompany_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetDeliveriesByCompanyResponse" message="tns:IGroupService_GetDeliveriesByCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetDelivery" message="tns:IGroupService_GetDelivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetDeliveryResponse" message="tns:IGroupService_GetDelivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddtoCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/AddtoCart" message="tns:IGroupService_AddtoCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/AddtoCartResponse" message="tns:IGroupService_AddtoCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditFromCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/EditFromCart" message="tns:IGroupService_EditFromCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/EditFromCartResponse" message="tns:IGroupService_EditFromCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCartItemsForClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetAllCartItemsForClient" message="tns:IGroupService_GetAllCartItemsForClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetAllCartItemsForClientResponse" message="tns:IGroupService_GetAllCartItemsForClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsInCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetAllProductsInCart" message="tns:IGroupService_GetAllProductsInCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetAllProductsInCartResponse" message="tns:IGroupService_GetAllProductsInCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetCartItem" message="tns:IGroupService_GetCartItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetCartItemResponse" message="tns:IGroupService_GetCartItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/RemoveFromCart" message="tns:IGroupService_RemoveFromCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/RemoveFromCartResponse" message="tns:IGroupService_RemoveFromCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearTheCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/ClearTheCart" message="tns:IGroupService_ClearTheCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/ClearTheCartResponse" message="tns:IGroupService_ClearTheCart_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IGroupService" type="tns:IGroupService">
@@ -848,6 +938,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetDeliveryForOrder">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/GetDeliveryForOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetDeliveriesForClient">
       <soap:operation soapAction="http://tempuri.org/IGroupService/GetDeliveriesForClient" style="document" />
       <wsdl:input>
@@ -859,6 +958,78 @@
     </wsdl:operation>
     <wsdl:operation name="GetDeliveriesByCompany">
       <soap:operation soapAction="http://tempuri.org/IGroupService/GetDeliveriesByCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDelivery">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/GetDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddtoCart">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/AddtoCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditFromCart">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/EditFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCartItemsForClient">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/GetAllCartItemsForClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsInCart">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/GetAllProductsInCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartItem">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/GetCartItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromCart">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/RemoveFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearTheCart">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/ClearTheCart" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
