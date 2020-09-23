@@ -14,7 +14,6 @@ namespace Group_MaskInc_FrontEnd
         protected void Page_Load(object sender, EventArgs e)
         {
             //On home page, show the number of different items there are in the cart
-            
 
         }
     }
