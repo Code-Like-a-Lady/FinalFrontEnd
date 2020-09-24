@@ -28,7 +28,7 @@
     <!-- Cart Total Page Begin -->
     <section class="cart-total-page spad">
         <div class="container">
-            <form action="#" class="checkout-form" id="Checkout_Form">
+            <form action="Payment.aspx" class="checkout-form" id="Checkout_Form">
                 <div class="row">
                     <div class="col-lg-12">
                         <h3>Your Information</h3>
@@ -46,6 +46,7 @@
                                             oninput="this.setCustomValidity('')" id="CompName" />
                             </div>
                         </div>
+
                          <!-- Province 
                         <div class="row">
                             <div class="col-lg-2">
@@ -67,6 +68,7 @@
                         </div> 
 
                 <div class="row"> &nbsp </div> -->
+
                          <!--Street Address  -->
                   <div class="row">
                             <div class="col-lg-2">
@@ -77,8 +79,6 @@
                                 <input type="text" required placeholder="Address" id="Address2">
                             </div>
                         </div>
-
-                         
 
                          <!-- City-->
                         <div class="row">
@@ -147,12 +147,14 @@
                                 <li>Mastercard<a href="Payment.aspx"><img src="assets/img/mastercard.jpg" alt=""></a></li>
                                 <li>Visa<a href="Payment.aspx"><img src="assets/img/Visa2.png" alt=""></a></li>
                             </ul>
-                    <button id="Payment_Btn" type="submit"  onsubmit="location.href='Payment.aspx'" >Proceed to Payment</button>
+                    <button id="Payment_Btn" type="submit" onsubmit="location.href='Payment.aspx'" >Proceed to Payment</button>
                         </div>
                     </div>
                 </div>
-                </form>
+            
+                </form>    
         </div>
+
     </section>
     <!-- Cart Total Page End  -->
 
