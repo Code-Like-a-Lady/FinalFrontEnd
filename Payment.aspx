@@ -48,7 +48,7 @@
                                 <p class="in-name">Card Number*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="Card Number" >
+                                <input type="text" required placeholder="Card Number" title="16 Digit Card Number(Located on the front of your card)" pattern="[0-9]{16}">
                             </div>
                         </div>
                          <!--Cvv + Date-->
@@ -57,7 +57,7 @@
                                 <p class="in-name">CVV*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="CVV">
+                                <input type="text" required placeholder="CVV" title="3 Digits(Located on the back of your card next to your signature)" pattern="[0-9]{3}">
                             </div>
                         </div>
                          <!-- Expiry Date -->
@@ -66,14 +66,14 @@
                                 <p class="in-name">Expiry Date*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="MM/YY">
+                                <input type="text" required placeholder="MM/YY" title="MM/YY" pattern="(0[1-9]|1[0-2])/([0-9]{2})">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="order-table">
                             <div class="cart-item">
-                                <span>Price</span>
+                                <span>Price(Excl. Tax)</span>
                                 <p>R0</p>
                             </div>
                             <div class="cart-item">
@@ -88,7 +88,10 @@
                                 <span>Shipping</span>
                                 <p>R0</p>
                             </div>
-
+                            <div class="cart-item">
+                                <span>Discount</span>
+                                <p>-R0</p>
+                            </div>
                             <div class="cart-total">
                                 <span>Total</span>
                                 <p>R0</p>
