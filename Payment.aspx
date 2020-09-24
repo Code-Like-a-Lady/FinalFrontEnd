@@ -3,8 +3,6 @@
   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
-    
 
     <!-- Page Add Section Begin -->
     <section class="page-add">
@@ -12,7 +10,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>Checkout<span>.</span></h2>
+                        <h2>Payment<span>.</span></h2>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -29,78 +27,46 @@
             <form action="#" class="checkout-form">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3>Your Information</h3>
+                        <h3>Your Payment Information</h3>
                     </div>
 
-                      <!--Company Name  -->
+                      <!--Card Holder Name  -->
                     <div class="col-lg-9">
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Name*</p>
+                                <p class="in-name">CardHolder Name*</p>
                             </div>
                             <div class="col-lg-5">
-                                <input type="text" required placeholder="Company Name "
-                                     oninvalid="this.setCustomValidity('Company Name is Required')"
+                                <input type="text" required placeholder="CardHolder Name"
+                                     oninvalid="this.setCustomValidity('Card Holder Name is Required')"
                                             oninput="this.setCustomValidity('')" />
                             </div>
                         </div>
-                         <!-- Province 
+                      <!-- Card Number-->
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Province*</p>
+                                <p class="in-name">Card Number*</p>
                             </div>
                             <div class="col-lg-10">
-                                <select class="cart-select province-sa">
-                                    <option value="WC">Western Cape</option>
-                                    <option value="EC">Eastern Cape</option>
-                                    <option value="NC">Northern Cape</option>
-                                    <option value="NW">North West</option>
-                                    <option value="FS">Free State</option>
-                                    <option value="KwN">Kwazulu Natal</option>
-                                    <option value="G">Gauteng</option>
-                                    <option value="L">Limpopo</option>
-                                    <option value="M">Mpumalanga</option>
-                                </select>
+                                <input type="text" required placeholder="Card Number" >
                             </div>
-                        </div> 
-
-                <div class="row"> &nbsp </div> -->
-                         <!--Street Address  -->
+                        </div>
+                         <!--Cvv + Date-->
                   <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Street Address*</p>
+                                <p class="in-name">CVV*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="Address">
-                                <input type="text" required placeholder="Address">
+                                <input type="text" required placeholder="CVV">
                             </div>
                         </div>
-
-
-                         <!-- City-->
+                         <!-- Expiry Date -->
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">City*</p>
+                                <p class="in-name">Expiry Date*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="City" >
-                            </div>
-                        </div>
-                         <!-- Zip Code -->
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <p class="in-name">Post Code/ZIP*</p>
-                            </div>
-                            <div class="col-lg-10">
-                                <input type="text" required placeholder="Zip Code">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <p class="in-name">Phone*</p>
-                            </div>
-                            <div class="col-lg-10">
-                                <input type="text" required placeholder="Phone Number">
+                                <input type="text" required placeholder="MM/YY">
                             </div>
                         </div>
                     </div>
@@ -133,19 +99,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="payment-method">
-                            <h3>Payment Options</h3>
-                            <ul>
-                                <li>Paypal <a href="Payment.aspx"><img src="assets/img/paypal.jpg" alt=""></a></li>
-                                <li>Mastercard<a href="Payment.aspx"><img src="assets/img/mastercard.jpg" alt=""></a></li>
-                                <li>Visa<a href="Payment.aspx"><img src="assets/img/Visa2.png" alt=""></a></li>
-                            </ul>
-                    <button type="submit" onclick="location.href='Payment.aspx'">Proceed to Payment</button>
+                            <div style="text-align:center"><h3>Thank You for Shopping with us </h3></div>
+                            
+                            <button type="submit" onclick="location.href='Home.aspx'">Place your order</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </section>
-    <!-- Cart Total Page End   -->
+    <!-- Cart Total Page End -->
 
 </asp:Content>

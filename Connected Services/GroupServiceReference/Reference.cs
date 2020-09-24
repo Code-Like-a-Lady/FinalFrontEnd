@@ -1583,12 +1583,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllDeliveries", ReplyAction="http://tempuri.org/IGroupService/GetAllDeliveriesResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[]> GetAllDeliveriesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
-        Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
-        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveriesForClient", ReplyAction="http://tempuri.org/IGroupService/GetDeliveriesForClientResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesForClient(int ClientID);
         
@@ -1601,23 +1595,29 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveriesByCompany", ReplyAction="http://tempuri.org/IGroupService/GetDeliveriesByCompanyResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[]> GetDeliveriesByCompanyAsync(int DeliveryID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDeliveryForOrder", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryForOrderResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDelivery", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDelivery(int DeliveryID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetDelivery", ReplyAction="http://tempuri.org/IGroupService/GetDeliveryResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryAsync(int DeliveryID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddtoCart", ReplyAction="http://tempuri.org/IGroupService/AddtoCartResponse")]
-        bool AddtoCart(int ClientId, int ProductID, int quantity, decimal price);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddtoCart", ReplyAction="http://tempuri.org/IGroupService/AddtoCartResponse")]
-        System.Threading.Tasks.Task<bool> AddtoCartAsync(int ClientId, int ProductID, int quantity, decimal price);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/EditFromCart", ReplyAction="http://tempuri.org/IGroupService/EditFromCartResponse")]
         bool EditFromCart(int ClientId, int ProductID, int quantity, decimal price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/EditFromCart", ReplyAction="http://tempuri.org/IGroupService/EditFromCartResponse")]
         System.Threading.Tasks.Task<bool> EditFromCartAsync(int ClientId, int ProductID, int quantity, decimal price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllCartItemsForClient", ReplyAction="http://tempuri.org/IGroupService/GetAllCartItemsForClientResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Cart[] GetAllCartItemsForClient(int ClientID);
@@ -1631,12 +1631,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllProductsInCart", ReplyAction="http://tempuri.org/IGroupService/GetAllProductsInCartResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product[]> GetAllProductsInCartAsync(int ClientID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
-        Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetCartItem", ReplyAction="http://tempuri.org/IGroupService/GetCartItemResponse")]
-        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/RemoveFromCart", ReplyAction="http://tempuri.org/IGroupService/RemoveFromCartResponse")]
         bool RemoveFromCart(int ClientId, int ProdID);
         
@@ -1648,6 +1642,18 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/ClearTheCart", ReplyAction="http://tempuri.org/IGroupService/ClearTheCartResponse")]
         System.Threading.Tasks.Task<bool> ClearTheCartAsync(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/CalculateTotalPrice", ReplyAction="http://tempuri.org/IGroupService/CalculateTotalPriceResponse")]
+        decimal CalculateTotalPrice(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/CalculateTotalPrice", ReplyAction="http://tempuri.org/IGroupService/CalculateTotalPriceResponse")]
+        System.Threading.Tasks.Task<decimal> CalculateTotalPriceAsync(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/CalculateTotalQuantity", ReplyAction="http://tempuri.org/IGroupService/CalculateTotalQuantityResponse")]
+        int CalculateTotalQuantity(int ClientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/CalculateTotalQuantity", ReplyAction="http://tempuri.org/IGroupService/CalculateTotalQuantityResponse")]
+        System.Threading.Tasks.Task<int> CalculateTotalQuantityAsync(int ClientID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2021,14 +2027,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetAllDeliveriesAsync();
         }
         
-        public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID) {
-            return base.Channel.GetDeliveryForOrder(orderID);
-        }
-        
-        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID) {
-            return base.Channel.GetDeliveryForOrderAsync(orderID);
-        }
-        
         public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetDeliveriesForClient(int ClientID) {
             return base.Channel.GetDeliveriesForClient(ClientID);
         }
@@ -2045,6 +2043,14 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetDeliveriesByCompanyAsync(DeliveryID);
         }
         
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDeliveryForOrder(int orderID) {
+            return base.Channel.GetDeliveryForOrder(orderID);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Delivery> GetDeliveryForOrderAsync(int orderID) {
+            return base.Channel.GetDeliveryForOrderAsync(orderID);
+        }
+        
         public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery GetDelivery(int DeliveryID) {
             return base.Channel.GetDelivery(DeliveryID);
         }
@@ -2053,20 +2059,20 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetDeliveryAsync(DeliveryID);
         }
         
-        public bool AddtoCart(int ClientId, int ProductID, int quantity, decimal price) {
-            return base.Channel.AddtoCart(ClientId, ProductID, quantity, price);
-        }
-        
-        public System.Threading.Tasks.Task<bool> AddtoCartAsync(int ClientId, int ProductID, int quantity, decimal price) {
-            return base.Channel.AddtoCartAsync(ClientId, ProductID, quantity, price);
-        }
-        
         public bool EditFromCart(int ClientId, int ProductID, int quantity, decimal price) {
             return base.Channel.EditFromCart(ClientId, ProductID, quantity, price);
         }
         
         public System.Threading.Tasks.Task<bool> EditFromCartAsync(int ClientId, int ProductID, int quantity, decimal price) {
             return base.Channel.EditFromCartAsync(ClientId, ProductID, quantity, price);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id) {
+            return base.Channel.GetCartItem(ClientID, Prod_Id);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id) {
+            return base.Channel.GetCartItemAsync(ClientID, Prod_Id);
         }
         
         public Group_MaskInc_FrontEnd.GroupServiceReference.Cart[] GetAllCartItemsForClient(int ClientID) {
@@ -2085,14 +2091,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetAllProductsInCartAsync(ClientID);
         }
         
-        public Group_MaskInc_FrontEnd.GroupServiceReference.Cart GetCartItem(int ClientID, int Prod_Id) {
-            return base.Channel.GetCartItem(ClientID, Prod_Id);
-        }
-        
-        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Cart> GetCartItemAsync(int ClientID, int Prod_Id) {
-            return base.Channel.GetCartItemAsync(ClientID, Prod_Id);
-        }
-        
         public bool RemoveFromCart(int ClientId, int ProdID) {
             return base.Channel.RemoveFromCart(ClientId, ProdID);
         }
@@ -2107,6 +2105,22 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         public System.Threading.Tasks.Task<bool> ClearTheCartAsync(int ClientID) {
             return base.Channel.ClearTheCartAsync(ClientID);
+        }
+        
+        public decimal CalculateTotalPrice(int ClientID) {
+            return base.Channel.CalculateTotalPrice(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<decimal> CalculateTotalPriceAsync(int ClientID) {
+            return base.Channel.CalculateTotalPriceAsync(ClientID);
+        }
+        
+        public int CalculateTotalQuantity(int ClientID) {
+            return base.Channel.CalculateTotalQuantity(ClientID);
+        }
+        
+        public System.Threading.Tasks.Task<int> CalculateTotalQuantityAsync(int ClientID) {
+            return base.Channel.CalculateTotalQuantityAsync(ClientID);
         }
     }
 }
