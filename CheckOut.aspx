@@ -23,10 +23,12 @@
     </section>
     <!-- Page Add Section End -->
 
+
+                
     <!-- Cart Total Page Begin -->
     <section class="cart-total-page spad">
         <div class="container">
-            <form action="#" class="checkout-form">
+            <form action="#" class="checkout-form" id="Checkout_Form">
                 <div class="row">
                     <div class="col-lg-12">
                         <h3>Your Information</h3>
@@ -41,7 +43,7 @@
                             <div class="col-lg-5">
                                 <input type="text" required placeholder="Company Name "
                                      oninvalid="this.setCustomValidity('Company Name is Required')"
-                                            oninput="this.setCustomValidity('')" />
+                                            oninput="this.setCustomValidity('')" id="CompName" />
                             </div>
                         </div>
                          <!-- Province 
@@ -50,7 +52,7 @@
                                 <p class="in-name">Province*</p>
                             </div>
                             <div class="col-lg-10">
-                                <select class="cart-select province-sa">
+                                <select name="Province" id="Province" >
                                     <option value="WC">Western Cape</option>
                                     <option value="EC">Eastern Cape</option>
                                     <option value="NC">Northern Cape</option>
@@ -71,11 +73,12 @@
                                 <p class="in-name">Street Address*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="Address">
-                                <input type="text" required placeholder="Address">
+                                <input type="text" required placeholder="Address" id="Address1">
+                                <input type="text" required placeholder="Address" id="Address2">
                             </div>
                         </div>
 
+                         
 
                          <!-- City-->
                         <div class="row">
@@ -83,7 +86,7 @@
                                 <p class="in-name">City*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="City" >
+                                <input type="text" required placeholder="City" id="city" >
                             </div>
                         </div>
                          <!-- Zip Code -->
@@ -92,7 +95,7 @@
                                 <p class="in-name">Post Code/ZIP*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="Zip Code">
+                                <input type="text" required placeholder="Zip Code" id="Zip" title="4 Digit Zip Code" pattern="[0-9]{4}">
                             </div>
                         </div>
                         <div class="row">
@@ -100,14 +103,14 @@
                                 <p class="in-name">Phone*</p>
                             </div>
                             <div class="col-lg-10">
-                                <input type="text" required placeholder="Phone Number">
+                                <input type="text" required placeholder="Phone Number" title="10 digit number" pattern="[0-9]{10}" id="Contact_Number">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="order-table">
                             <div class="cart-item">
-                                <span>Price</span>
+                                <span>Price(Excl. Tax)</span>
                                 <p>R0</p>
                             </div>
                             <div class="cart-item">
@@ -122,6 +125,10 @@
                                 <span>Shipping</span>
                                 <p>R0</p>
                             </div>
+                    <div class="cart-item">
+                                <span>Discount</span>
+                                <p>-R0</p>
+                            </div>
 
                             <div class="cart-total">
                                 <span>Total</span>
@@ -130,6 +137,7 @@
                         </div>
                     </div>
                 </div>
+            
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="payment-method">
@@ -139,13 +147,13 @@
                                 <li>Mastercard<a href="Payment.aspx"><img src="assets/img/mastercard.jpg" alt=""></a></li>
                                 <li>Visa<a href="Payment.aspx"><img src="assets/img/Visa2.png" alt=""></a></li>
                             </ul>
-                    <button type="submit" onclick="location.href='Payment.aspx'">Proceed to Payment</button>
+                    <button id="Payment_Btn" type="submit"  onsubmit="location.href='Payment.aspx'" >Proceed to Payment</button>
                         </div>
                     </div>
                 </div>
-            </form>
+                </form>
         </div>
     </section>
-    <!-- Cart Total Page End   -->
+    <!-- Cart Total Page End  -->
 
 </asp:Content>
