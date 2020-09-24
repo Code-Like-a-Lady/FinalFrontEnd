@@ -147,12 +147,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Delivery" nillable="true" type="tns:Delivery" />
-  <xs:complexType name="ArrayOfCart">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cart" nillable="true" type="tns:Cart" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCart" nillable="true" type="tns:ArrayOfCart" />
   <xs:complexType name="Cart">
     <xs:sequence>
       <xs:element minOccurs="0" name="Client_Id" type="xs:int" />
@@ -162,4 +156,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Cart" nillable="true" type="tns:Cart" />
+  <xs:complexType name="ArrayOfCart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cart" nillable="true" type="tns:Cart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCart" nillable="true" type="tns:ArrayOfCart" />
 </xs:schema>
