@@ -34,7 +34,7 @@
                     <div class="col-lg-9">
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">CardHolder Name*</p>
+                                <p class="in-name">CardHolder*</p>
                             </div>
                             <div class="col-lg-5">
                                 <input type="text" required placeholder="CardHolder Name"
