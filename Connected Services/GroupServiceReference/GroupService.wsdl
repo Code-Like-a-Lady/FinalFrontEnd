@@ -259,6 +259,30 @@
   <wsdl:message name="IGroupService_Getsproductsize_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetsproductsizeResponse" />
   </wsdl:message>
+  <wsdl:message name="IGroupService_Getallsizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getallsizes" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_Getallsizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetallsizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_Getallproductsizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getallproductsizes" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_Getallproductsizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetallproductsizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_AddAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_Getcategorybyname_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getcategorybyname" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_Getcategorybyname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetcategorybynameResponse" />
+  </wsdl:message>
   <wsdl:message name="IGroupService_GetAllDeliveries_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllDeliveries" />
   </wsdl:message>
@@ -505,6 +529,22 @@
     <wsdl:operation name="Getsproductsize">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Getsproductsize" message="tns:IGroupService_Getsproductsize_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetsproductsizeResponse" message="tns:IGroupService_Getsproductsize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getallsizes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Getallsizes" message="tns:IGroupService_Getallsizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetallsizesResponse" message="tns:IGroupService_Getallsizes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getallproductsizes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Getallproductsizes" message="tns:IGroupService_Getallproductsizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetallproductsizesResponse" message="tns:IGroupService_Getallproductsizes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/AddAdmin" message="tns:IGroupService_AddAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/AddAdminResponse" message="tns:IGroupService_AddAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getcategorybyname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Getcategorybyname" message="tns:IGroupService_Getcategorybyname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetcategorybynameResponse" message="tns:IGroupService_Getcategorybyname_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllDeliveries">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetAllDeliveries" message="tns:IGroupService_GetAllDeliveries_InputMessage" />
@@ -932,6 +972,42 @@
     </wsdl:operation>
     <wsdl:operation name="Getsproductsize">
       <soap:operation soapAction="http://tempuri.org/IGroupService/Getsproductsize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getallsizes">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/Getallsizes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getallproductsizes">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/Getallproductsizes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdmin">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/AddAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getcategorybyname">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/Getcategorybyname" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -133,6 +133,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfProduct_Size" nillable="true" type="tns:ArrayOfProduct_Size" />
+  <xs:complexType name="ArrayOfSize_Table">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Size_Table" nillable="true" type="tns:Size_Table" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSize_Table" nillable="true" type="tns:ArrayOfSize_Table" />
   <xs:complexType name="ArrayOfDelivery">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Delivery" nillable="true" type="tns:Delivery" />

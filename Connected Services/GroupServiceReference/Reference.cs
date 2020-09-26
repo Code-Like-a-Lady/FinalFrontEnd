@@ -1577,6 +1577,30 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getsproductsize", ReplyAction="http://tempuri.org/IGroupService/GetsproductsizeResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size> GetsproductsizeAsync(int sid);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getallsizes", ReplyAction="http://tempuri.org/IGroupService/GetallsizesResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Size_Table[] Getallsizes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getallsizes", ReplyAction="http://tempuri.org/IGroupService/GetallsizesResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Size_Table[]> GetallsizesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getallproductsizes", ReplyAction="http://tempuri.org/IGroupService/GetallproductsizesResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size[] Getallproductsizes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getallproductsizes", ReplyAction="http://tempuri.org/IGroupService/GetallproductsizesResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size[]> GetallproductsizesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddAdmin", ReplyAction="http://tempuri.org/IGroupService/AddAdminResponse")]
+        string AddAdmin(Group_MaskInc_FrontEnd.GroupServiceReference.User_Table user, string surname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/AddAdmin", ReplyAction="http://tempuri.org/IGroupService/AddAdminResponse")]
+        System.Threading.Tasks.Task<string> AddAdminAsync(Group_MaskInc_FrontEnd.GroupServiceReference.User_Table user, string surname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getcategorybyname", ReplyAction="http://tempuri.org/IGroupService/GetcategorybynameResponse")]
+        string Getcategorybyname(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getcategorybyname", ReplyAction="http://tempuri.org/IGroupService/GetcategorybynameResponse")]
+        System.Threading.Tasks.Task<string> GetcategorybynameAsync(string name);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllDeliveries", ReplyAction="http://tempuri.org/IGroupService/GetAllDeliveriesResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetAllDeliveries();
         
@@ -2017,6 +2041,38 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size> GetsproductsizeAsync(int sid) {
             return base.Channel.GetsproductsizeAsync(sid);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Size_Table[] Getallsizes() {
+            return base.Channel.Getallsizes();
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Size_Table[]> GetallsizesAsync() {
+            return base.Channel.GetallsizesAsync();
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size[] Getallproductsizes() {
+            return base.Channel.Getallproductsizes();
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product_Size[]> GetallproductsizesAsync() {
+            return base.Channel.GetallproductsizesAsync();
+        }
+        
+        public string AddAdmin(Group_MaskInc_FrontEnd.GroupServiceReference.User_Table user, string surname) {
+            return base.Channel.AddAdmin(user, surname);
+        }
+        
+        public System.Threading.Tasks.Task<string> AddAdminAsync(Group_MaskInc_FrontEnd.GroupServiceReference.User_Table user, string surname) {
+            return base.Channel.AddAdminAsync(user, surname);
+        }
+        
+        public string Getcategorybyname(string name) {
+            return base.Channel.Getcategorybyname(name);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetcategorybynameAsync(string name) {
+            return base.Channel.GetcategorybynameAsync(name);
         }
         
         public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetAllDeliveries() {

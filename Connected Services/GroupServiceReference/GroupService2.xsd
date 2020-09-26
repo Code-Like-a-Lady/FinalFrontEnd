@@ -638,6 +638,59 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Getallsizes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetallsizesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetallsizesResult" nillable="true" type="q22:ArrayOfSize_Table" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getallproductsizes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetallproductsizesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetallproductsizesResult" nillable="true" type="q23:ArrayOfProduct_Size" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="user" nillable="true" type="q24:User_Table" />
+        <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAdminResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getcategorybyname">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetcategorybynameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetcategorybynameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAllDeliveries">
     <xs:complexType>
       <xs:sequence />
@@ -646,7 +699,7 @@
   <xs:element name="GetAllDeliveriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllDeliveriesResult" nillable="true" type="q22:ArrayOfDelivery" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllDeliveriesResult" nillable="true" type="q25:ArrayOfDelivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -660,7 +713,7 @@
   <xs:element name="GetDeliveriesForClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesForClientResult" nillable="true" type="q23:ArrayOfDelivery" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesForClientResult" nillable="true" type="q26:ArrayOfDelivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -674,7 +727,7 @@
   <xs:element name="GetDeliveriesByCompanyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesByCompanyResult" nillable="true" type="q24:ArrayOfOrder_Table" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesByCompanyResult" nillable="true" type="q27:ArrayOfOrder_Table" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -688,7 +741,7 @@
   <xs:element name="GetDeliveryForOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryForOrderResult" nillable="true" type="q25:Delivery" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryForOrderResult" nillable="true" type="q28:Delivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -702,7 +755,7 @@
   <xs:element name="GetDeliveryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryResult" nillable="true" type="q26:Delivery" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryResult" nillable="true" type="q29:Delivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -734,7 +787,7 @@
   <xs:element name="GetCartItemResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetCartItemResult" nillable="true" type="q27:Cart" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetCartItemResult" nillable="true" type="q30:Cart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -748,7 +801,7 @@
   <xs:element name="GetAllCartItemsForClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllCartItemsForClientResult" nillable="true" type="q28:ArrayOfCart" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllCartItemsForClientResult" nillable="true" type="q31:ArrayOfCart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -762,7 +815,7 @@
   <xs:element name="GetAllProductsInCartResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllProductsInCartResult" nillable="true" type="q29:ArrayOfProduct" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllProductsInCartResult" nillable="true" type="q32:ArrayOfProduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
